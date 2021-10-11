@@ -10,15 +10,19 @@ namespace EncapsulationInClass
 
             var bal = mAcct.GetBalance();
             Console.WriteLine("Balance:");
-            Console.WriteLine($"${bal}");
+            Console.WriteLine(bal);
 
-            bal = mAcct.Deposit(2500);
-            Console.WriteLine("(+2500) Balance after deposit:");
-            Console.WriteLine($"${bal}");
+            mAcct.Deposit(2500);
+            bal = mAcct.GetBalance();
+            Console.WriteLine("Balance after deposit:");
+            Console.WriteLine(bal);
+          
 
-            bal = mAcct.Withdraw(250);
-            Console.WriteLine("(-250) Balance after withdrawal:");
-            Console.WriteLine($"${bal}");
+            mAcct.Withdraw(250);
+            bal = mAcct.GetBalance();
+            Console.WriteLine("Balance after withdrawal:");
+            Console.WriteLine(bal);
+          
         }
     }
 }

@@ -3,16 +3,16 @@ namespace EncapsulationInClass
 {
     public class BankAccount
     {
-        private double _balance;
+        private double _balance = 0;
 
         public BankAccount(double amount)
         {
             _balance = amount;
         }
 
-        public double Deposit(double amount)
+        public void Deposit(double amount)
         {
-            return _balance += amount;
+            _balance += amount;
         }
 
         public double GetBalance()
@@ -20,9 +20,9 @@ namespace EncapsulationInClass
             return _balance;
         }
 
-        public double Withdraw(double amount)
+        public void Withdraw(double amount)
         {
-            return _balance -= amount;
+            _balance -= amount;
         }
     }
 }
